@@ -1,9 +1,0 @@
-cff-version: 1.2.0
-message: "If you use this software, reference datasets, or models, please cite it as below."
-title: "Prediction of Flow Field Using Machine Learning: A Multi-Stage Physics-Informed Neural Network Investigation"
-authors:
-  - family-names: "Singh"
-    given-names: "Divyansh"
-    affiliation: "Indian Institute of Technology Kanpur"
-year: 2026
-url: "https://github.com/dsjc101/Prediction-of-Flow-Field-Using-Machine-Learning"

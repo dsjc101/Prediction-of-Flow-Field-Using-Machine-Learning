@@ -150,6 +150,3 @@ As documented in Section 10.1 of the report:
 
 ---
 
-## License
-
-License: to be added (pending institutional confirmation; open academic use).

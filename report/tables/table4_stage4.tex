@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccc}
+\toprule
+\textbf{Metric Variable} & $\mathbf{Re=28{,}000}$ (TEST-interp) & $\mathbf{Re=96{,}000}$ (TEST-extrap 1.2$\times$) & $\mathbf{Re=120{,}000}$ (TEST-extrap 1.5$\times$) \\
+\midrule
+$u$ (Axial Velocity Rel $L_2$) & 0.42\% & 0.48\% & 0.58\% \\
+$v$ (Vertical Velocity Rel $L_2$) & 16.86\% & 6.50\% & 7.14\% \\
+$p$ (Kinematic Pressure Rel $L_2$) & 0.38\% & 0.44\% & 0.58\% \\
+$C_f$ (Skin Friction Rel Error) & 6.11\% & 5.23\% & 5.22\% \\
+$\tilde{\nu}$ (Eddy Viscosity Rel $L_2$) & 99.21\% & 99.47\% & 99.50\% \\
+\bottomrule
+\end{tabular}
+}
+\caption{Stage 4: Exact quantitative test metrics for turbulent channel flow (Source: \texttt{4/outputs/final\_metrics.csv} and checkpoint evaluation). $C_f$ error is the relative error of the wall shear stress coefficient with respect to the reference solver.}
+\label{tab:stage4_metrics}
+\end{table}

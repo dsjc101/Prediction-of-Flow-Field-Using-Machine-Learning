@@ -1,0 +1,19 @@
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccc}
+\toprule
+\textbf{Metric Variable} & $\mathbf{Re=28{,}000}$ (TEST-interp) & $\mathbf{Re=96{,}000}$ (TEST-extrap 1.2$\times$) & $\mathbf{Re=120{,}000}$ (TEST-extrap 1.5$\times$) \\
+\midrule
+$u$ (Axial Velocity Rel $L_2$) & 0.36\% & 0.38\% & 0.57\% \\
+$v$ (Radial Velocity Rel $L_2$) & 4.69\% & 2.87\% & 4.47\% \\
+$p$ (Kinematic Pressure Rel $L_2$) & 0.65\% & 0.98\% & 2.57\% \\
+$C_f$ (Skin Friction Rel Error) & 1.47\% & 1.77\% & 2.24\% \\
+$\tilde{\nu}$ (Eddy Viscosity Whole-Domain Rel $L_2$) & 47.11\% & 77.23\% & 79.64\% \\
+$\tilde{\nu}$ (Eddy Viscosity Exit $x=160R$ Rel $L_2$) & 51.98\% & 79.39\% & 81.11\% \\
+\bottomrule
+\end{tabular}
+}
+\caption{Stage 5: Exact quantitative test metrics for axisymmetric turbulent pipe flow (Source: \texttt{5/outputs/eval\_dense\_final\_test.json} and checkpoint evaluation). $C_f$ error is the relative error of the wall shear stress coefficient with respect to the reference solver.}
+\label{tab:stage5_metrics}
+\end{table}

@@ -1,0 +1,17 @@
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Metric Variable} & $\mathbf{Re=50}$ & $\mathbf{Re=100}$ & $\mathbf{Re=200}$ & $\mathbf{Re=300}$ (TEST-interp) & $\mathbf{Re=500}$ & $\mathbf{Re=600}$ (TEST-extrap) \\
+\midrule
+$u$ (Axial Velocity Rel $L_2$) & 8.81\% & 8.91\% & 9.77\% & 10.62\% & 12.08\% & 12.69\% \\
+$v$ (Vertical Velocity Rel $L_2$) & 2.79\% & 2.46\% & 2.02\% & 1.74\% & 1.40\% & 1.30\% \\
+$w$ (Horizontal Velocity Rel $L_2$) & 1.72\% & 1.42\% & 1.11\% & 0.94\% & 0.73\% & 0.66\% \\
+$p$ (Kinematic Pressure Rel $L_2$) & 80.70\% & 73.86\% & 66.66\% & 56.77\% & 67.22\% & 106.39\% \\
+\bottomrule
+\end{tabular}
+}
+\caption{Stage 3: Full-domain relative $L_2$ errors for 3D rectangular duct flow (Source: \texttt{3/figures/global\_summary.txt}).}
+\label{tab:stage3_metrics}
+\end{table}

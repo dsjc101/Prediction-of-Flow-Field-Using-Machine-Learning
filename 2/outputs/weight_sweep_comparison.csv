@@ -1,0 +1,6 @@
+config,dev_mean_u_pct,dev_mean_v_pct,dev_mean_p_pct,fd_mean_u_pct,fd_mean_v_pct,fd_mean_p_pct,fd_Re50_u_pct,global_mean_u_pct,global_mean_v_pct,global_mean_p_pct,combined_score_pct
+fixed_baseline,9.264,1.376,15.086,1.795,1.256,7.631,3.197,4.855,1.678,7.097,4.543
+adaptive,7.929,1.495,14.469,2.200,1.606,7.494,2.202,4.103,1.913,7.477,4.498
+outlet_boost,4.729,1.825,13.017,2.785,1.438,5.010,3.878,3.434,1.756,6.205,3.798
+data_boost,7.169,1.529,9.217,1.631,1.199,7.942,2.024,3.854,1.522,4.502,3.293
+pressure_boost,5.681,2.130,3.104,1.903,1.712,5.584,1.375,3.152,2.031,1.898,2.360

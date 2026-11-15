@@ -1,0 +1,23 @@
+==============================================================================
+EVALUATION (1 model(s)); relL2 %, mean +- std over seeds
+==============================================================================
+
+[TRAIN] whole-domain
+  Re=  10000: u=  0.51+-0.00  v= 29.56+-0.00  p=  0.32+-0.00  cf=  3.28+-0.00
+  Re=  20000: u=  0.23+-0.00  v= 10.92+-0.00  p=  0.30+-0.00  cf=  5.13+-0.00
+  Re=  40000: u=  0.16+-0.00  v=  3.66+-0.00  p=  0.23+-0.00  cf=  6.85+-0.00
+  Re=  80000: u=  0.18+-0.00  v=  2.39+-0.00  p=  0.21+-0.00  cf=  6.33+-0.00
+
+[VAL] whole-domain
+  Re=  14000: u=  0.34+-0.00  v= 18.73+-0.00  p=  0.35+-0.00  cf=  3.97+-0.00
+  Re=  56000: u=  0.16+-0.00  v=  2.69+-0.00  p=  0.20+-0.00  cf=  6.89+-0.00
+  Re=  88000: u=  0.19+-0.00  v=  2.73+-0.00  p=  0.24+-0.00  cf=  6.11+-0.00
+
+GENERALISATION GAP (mean over Re of each role)
+  u: TRAIN 0.27%  VAL 0.23%  ratio VAL/TRAIN = 0.86
+  v: TRAIN 11.63%  VAL 8.05%  ratio VAL/TRAIN = 0.69
+  p: TRAIN 0.27%  VAL 0.26%  ratio VAL/TRAIN = 0.99
+  cf: TRAIN 5.39%  VAL 5.65%  ratio VAL/TRAIN = 1.05
+
+X-HOLD-OUT BANDS at TRAIN Re (never in the data loss): u: 0.21% (all-x 0.27%)  v: 2.01% (all-x 11.63%)  p: 0.22% (all-x 0.27%)  cf: 5.97% (all-x 5.39%)
+FRESH-point scaled PDE residual (rms): TRAIN: 10000:2.31e+01, 20000:2.39e+01, 40000:2.87e+01, 80000:7.12e+01  VAL: 14000:2.36e+01, 56000:3.60e+01, 88000:9.08e+01

@@ -1,0 +1,33 @@
+{
+  "architecture": {
+    "hidden": 4,
+    "width": 64,
+    "features": "wall"
+  },
+  "layer_frobenius_norms": {
+    "layer_0_weight": 3.4986014366149902,
+    "layer_1_weight": 11.069514274597168,
+    "layer_2_weight": 11.465093612670898,
+    "layer_3_weight": 10.354193687438965,
+    "layer_4_weight": 5.087344646453857
+  },
+  "biases": {
+    "layer_0_bias_mean": 0.010207686573266983,
+    "layer_0_bias_std": 0.17767445743083954,
+    "layer_1_bias_mean": -0.017888633534312248,
+    "layer_1_bias_std": 0.15303300321102142,
+    "layer_2_bias_mean": -0.0023998485412448645,
+    "layer_2_bias_std": 0.10168773680925369,
+    "layer_3_bias_mean": -0.001471454743295908,
+    "layer_3_bias_std": 0.12214753776788712,
+    "layer_4_bias_mean": 0.11073531210422516,
+    "layer_4_bias_std": 0.2728238105773926
+  },
+  "total_parameters": 13060,
+  "output_head_biases": {
+    "b_u": 0.024760114029049873,
+    "b_v": 0.4495445191860199,
+    "b_p": 0.17026527225971222,
+    "b_nut": -0.2016286700963974
+  }
+}

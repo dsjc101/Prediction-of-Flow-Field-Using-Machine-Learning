@@ -1,0 +1,7 @@
+Re,tag,u_global_relL2_pct,v_global_normL2_pct,p_global_normL2_pct,u_area_frac_err_lt_5pct,v_area_frac_err_lt_5pct,p_area_frac_err_lt_5pct
+50.0,TRAIN,2.6546,4.2525,2.7608,96.56,71.43,92.03
+100.0,TRAIN,2.2009,2.9441,1.5552,97.70,99.34,97.80
+200.0,TRAIN,2.8000,1.8536,1.3601,95.11,99.50,98.94
+300.0,INTERP (unseen),3.2415,1.3549,1.4655,92.45,99.62,98.77
+500.0,TRAIN,3.8556,0.9325,1.8438,86.73,99.74,97.37
+600.0,EXTRAP (unseen),4.1565,0.8510,2.4021,81.27,99.77,96.09

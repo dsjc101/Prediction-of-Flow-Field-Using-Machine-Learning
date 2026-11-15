@@ -1,0 +1,26 @@
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Configuration / Variant} & \textbf{Data Density} & \textbf{Loss Weights} & \textbf{Headline Error} & \textbf{PDE Residual} & \textbf{Gen. Ratio} & \textbf{Physical Conclusion / Finding} \\
+\midrule
+\multicolumn{7}{l}{\textbf{Stage 4: Turbulent Channel Flow} (Source: \texttt{4/outputs/ablation\_summary.txt} and \texttt{4/outputs\_sparse/ablation\_summary.txt})} \\
+Dense: A (Foundational Balanced) & 100\% Dense Grid & $w_{\text{data}}=6768, w_{\text{pde}}=3.4\times 10^{-5}$ & 1.88\% & 26.94 & 0.94 & Baseline calibrated surrogate \\
+Dense: B (Data-Only, $w_{\text{pde}}=0$) & 100\% Dense Grid & $w_{\text{data}}=6768, w_{\text{pde}}=0.0$ & 2.05\% & 50.13 & 0.95 & Data fits kinematics; residual rises 1.9$\times$ \\
+Dense: C (Physics-Boosted $100\times$) & 100\% Dense Grid & $w_{\text{data}}=6768, w_{\text{pde}}=3.4\times 10^{-3}$ & 3.60\% & 10.01 & 0.96 & Residual drops 2.7$\times$; fit slightly penalized \\
+\midrule
+Sparse: A (Foundational Balanced) & 1\% Sparse Points & $w_{\text{data}}=6768, w_{\text{pde}}=3.4\times 10^{-5}$ & 2.06\% & 4.75 & 1.00 & Robust momentum regularisation \\
+Sparse: B (Data-Only, $w_{\text{pde}}=0$) & 1\% Sparse Points & $w_{\text{data}}=6768, w_{\text{pde}}=0.0$ & 3.23\% & 699.22 & 1.57 & \textbf{147$\times$ PDE explosion} without physics regularisation \\
+Sparse: C (Physics-Boosted $100\times$) & 1\% Sparse Points & $w_{\text{data}}=6768, w_{\text{pde}}=3.4\times 10^{-3}$ & 1.60\% & 2.88 & 0.78 & Best sparse accuracy; physics enforces governing law \\
+\midrule
+\multicolumn{7}{l}{\textbf{Stage 5: Turbulent Pipe Flow} (Source: \texttt{5/outputs/ablation\_sparse.txt})} \\
+Sparse: A (Searched Weights) & 1\% Sparse Points & $w_{\text{data}}=1.0, w_{\text{pde}}=0.001$ & 1.92\% & 11.34 & 1.00 & Balanced multiobjective optimum \\
+Sparse: B (Data-Only, $w_{\text{pde}}=0$) & 1\% Sparse Points & $w_{\text{data}}=1.0, w_{\text{pde}}=0.0$ & 3.98\% & 4160.51 & 2.07 & \textbf{366$\times$ PDE explosion}; error doubles without physics \\
+Sparse: C (Physics-Boosted $100\times$) & 1\% Sparse Points & $w_{\text{data}}=1.0, w_{\text{pde}}=0.10$ & 9.86\% & 29.23 & 5.14 & Over-regularization suppresses velocity gradient capture \\
+\bottomrule
+\end{tabular}
+}
+\caption{Real ablation experiments extracted directly from saved training logs (\texttt{4/outputs/ablation\_summary.txt}, \texttt{4/outputs\_sparse/ablation\_summary.txt}, and \texttt{5/outputs/ablation\_sparse.txt}). Proves that in dense data regimes physics regularizes momentum, while in sparse regimes physics loss is strictly required to prevent a 147$\times$--366$\times$ explosion in PDE residual.}
+\label{tab:ablation_experiments}
+\end{table}

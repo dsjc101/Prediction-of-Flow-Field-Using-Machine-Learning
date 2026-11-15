@@ -1,0 +1,67 @@
+=== Le-fraction stations (headline numbers) ===
+Re=50 role=TRAIN field=U Le=0.637245 relL2@5%Le=0.280734 relL2@25%Le=0.142146 relL2@50%Le=0.110656 relL2@90%Le=0.098435 mean_relL2=0.157993
+Re=50 role=TRAIN field=V Le=0.637245 relL2@5%Le=0.143128 relL2@25%Le=0.028489 relL2@50%Le=0.018164 relL2@90%Le=0.017673 mean_relL2=0.051863
+Re=50 role=TRAIN field=W Le=0.637245 relL2@5%Le=0.055397 relL2@25%Le=0.009217 relL2@50%Le=0.011699 relL2@90%Le=0.014176 mean_relL2=0.022623
+Re=50 role=TRAIN field=P Le=0.637245 relL2@5%Le=1.096992 relL2@25%Le=1.436000 relL2@50%Le=0.365206 relL2@90%Le=0.498683 mean_relL2=0.849220
+Re=50 role=TRAIN field=ALL mean_relL2=0.270425
+Re=100 role=TRAIN field=U Le=1.269158 relL2@5%Le=0.277900 relL2@25%Le=0.136488 relL2@50%Le=0.101843 relL2@90%Le=0.087996 mean_relL2=0.151057
+Re=100 role=TRAIN field=V Le=1.269158 relL2@5%Le=0.067079 relL2@25%Le=0.018083 relL2@50%Le=0.015908 relL2@90%Le=0.016573 mean_relL2=0.029411
+Re=100 role=TRAIN field=W Le=1.269158 relL2@5%Le=0.022620 relL2@25%Le=0.007673 relL2@50%Le=0.010561 relL2@90%Le=0.011993 mean_relL2=0.013212
+Re=100 role=TRAIN field=P Le=1.269158 relL2@5%Le=1.363614 relL2@25%Le=0.294786 relL2@50%Le=0.221200 relL2@90%Le=0.285265 mean_relL2=0.541216
+Re=100 role=TRAIN field=ALL mean_relL2=0.183724
+Re=200 role=TRAIN field=U Le=2.532984 relL2@5%Le=0.273122 relL2@25%Le=0.134740 relL2@50%Le=0.100475 relL2@90%Le=0.086246 mean_relL2=0.148646
+Re=200 role=TRAIN field=V Le=2.532984 relL2@5%Le=0.032544 relL2@25%Le=0.013571 relL2@50%Le=0.013721 relL2@90%Le=0.014681 mean_relL2=0.018629
+Re=200 role=TRAIN field=W Le=2.532984 relL2@5%Le=0.008669 relL2@25%Le=0.007053 relL2@50%Le=0.008839 relL2@90%Le=0.009701 mean_relL2=0.008566
+Re=200 role=TRAIN field=P Le=2.532984 relL2@5%Le=2.503830 relL2@25%Le=0.102704 relL2@50%Le=0.087524 relL2@90%Le=0.080561 mean_relL2=0.693655
+Re=200 role=TRAIN field=ALL mean_relL2=0.217374
+Re=300 role=INTERP field=U Le=3.788810 relL2@5%Le=0.269575 relL2@25%Le=0.133875 relL2@50%Le=0.100950 relL2@90%Le=0.086728 mean_relL2=0.147782
+Re=300 role=INTERP field=V Le=3.788810 relL2@5%Le=0.022168 relL2@25%Le=0.011689 relL2@50%Le=0.012240 relL2@90%Le=0.013371 mean_relL2=0.014867
+Re=300 role=INTERP field=W Le=3.788810 relL2@5%Le=0.005376 relL2@25%Le=0.006524 relL2@50%Le=0.007772 relL2@90%Le=0.008437 mean_relL2=0.007027
+Re=300 role=INTERP field=P Le=3.788810 relL2@5%Le=1.791476 relL2@25%Le=0.081231 relL2@50%Le=0.108745 relL2@90%Le=0.071044 mean_relL2=0.513124
+Re=300 role=INTERP field=ALL mean_relL2=0.170700
+Re=500 role=TRAIN field=U Le=6.015170 relL2@5%Le=0.265451 relL2@25%Le=0.135454 relL2@50%Le=0.103830 relL2@90%Le=0.088905 mean_relL2=0.148410
+Re=500 role=TRAIN field=V Le=6.015170 relL2@5%Le=0.014577 relL2@25%Le=0.009778 relL2@50%Le=0.010491 relL2@90%Le=0.011879 mean_relL2=0.011681
+Re=500 role=TRAIN field=W Le=6.015170 relL2@5%Le=0.004142 relL2@25%Le=0.005698 relL2@50%Le=0.006392 relL2@90%Le=0.006829 mean_relL2=0.005766
+Re=500 role=TRAIN field=P Le=6.015170 relL2@5%Le=0.292947 relL2@25%Le=0.474136 relL2@50%Le=0.534531 relL2@90%Le=0.684579 mean_relL2=0.496548
+Re=500 role=TRAIN field=ALL mean_relL2=0.165601
+Re=600 role=EXTRAP field=U Le=6.807060 relL2@5%Le=0.267106 relL2@25%Le=0.138323 relL2@50%Le=0.106372 relL2@90%Le=0.090680 mean_relL2=0.150620
+Re=600 role=EXTRAP field=V Le=6.807060 relL2@5%Le=0.013094 relL2@25%Le=0.009258 relL2@50%Le=0.009936 relL2@90%Le=0.011330 mean_relL2=0.010905
+Re=600 role=EXTRAP field=W Le=6.807060 relL2@5%Le=0.004100 relL2@25%Le=0.005342 relL2@50%Le=0.005853 relL2@90%Le=0.006221 mean_relL2=0.005379
+Re=600 role=EXTRAP field=P Le=6.807060 relL2@5%Le=0.612849 relL2@25%Le=0.792024 relL2@50%Le=0.934428 relL2@90%Le=1.470176 mean_relL2=0.952369
+Re=600 role=EXTRAP field=ALL mean_relL2=0.279818
+Le_fraction_TRAIN_mean=0.209281
+Le_fraction_UNSEEN_mean=0.225259
+
+=== Whole-domain-sweep mean (context only) ===
+Re=50 role=TRAIN field=U mean_relL2=0.088148
+Re=50 role=TRAIN field=V mean_relL2=0.027943
+Re=50 role=TRAIN field=W mean_relL2=0.017225
+Re=50 role=TRAIN field=P mean_relL2=0.807015
+Re=50 role=TRAIN field=ALL mean_relL2=0.235083
+Re=100 role=TRAIN field=U mean_relL2=0.089082
+Re=100 role=TRAIN field=V mean_relL2=0.024566
+Re=100 role=TRAIN field=W mean_relL2=0.014214
+Re=100 role=TRAIN field=P mean_relL2=0.738645
+Re=100 role=TRAIN field=ALL mean_relL2=0.216627
+Re=200 role=TRAIN field=U mean_relL2=0.097672
+Re=200 role=TRAIN field=V mean_relL2=0.020189
+Re=200 role=TRAIN field=W mean_relL2=0.011133
+Re=200 role=TRAIN field=P mean_relL2=0.666558
+Re=200 role=TRAIN field=ALL mean_relL2=0.198888
+Re=300 role=INTERP field=U mean_relL2=0.106221
+Re=300 role=INTERP field=V mean_relL2=0.017401
+Re=300 role=INTERP field=W mean_relL2=0.009363
+Re=300 role=INTERP field=P mean_relL2=0.567701
+Re=300 role=INTERP field=ALL mean_relL2=0.175171
+Re=500 role=TRAIN field=U mean_relL2=0.120816
+Re=500 role=TRAIN field=V mean_relL2=0.014038
+Re=500 role=TRAIN field=W mean_relL2=0.007271
+Re=500 role=TRAIN field=P mean_relL2=0.672165
+Re=500 role=TRAIN field=ALL mean_relL2=0.203572
+Re=600 role=EXTRAP field=U mean_relL2=0.126917
+Re=600 role=EXTRAP field=V mean_relL2=0.012962
+Re=600 role=EXTRAP field=W mean_relL2=0.006590
+Re=600 role=EXTRAP field=P mean_relL2=1.063941
+Re=600 role=EXTRAP field=ALL mean_relL2=0.302603
+Whole_domain_TRAIN_mean=0.213542
+Whole_domain_UNSEEN_mean=0.238887

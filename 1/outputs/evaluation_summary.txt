@@ -1,0 +1,67 @@
+=== ERROR METRIC ===
+relL2(q) = 100 * sqrt(mean_i (q_pred_i - q_exact_i)^2) / scale(Re), mean over every wall-normal grid point at the station; scale(Re)=U0(Re) for u,v and scale(Re)=0.5*U0(Re)^2 for p (global, solution-independent reference -- see module docstring).
+
+=== Developing-region check (vs. Bodoia-Osterle), station fractions [0.05, 0.25, 0.5, 0.9] of each Re's Le ===
+
+-- field: u --
+Re=    50 [TRAIN           ]  per-station relL2=13.38%/11.15%/3.74%/3.32%  mean=7.90%
+Re=   100 [TRAIN           ]  per-station relL2=11.85%/12.53%/8.55%/4.24%  mean=9.29%
+Re=   200 [TRAIN           ]  per-station relL2=9.60%/9.75%/5.02%/4.81%  mean=7.30%
+Re=   300 [INTERP (unseen) ]  per-station relL2=11.08%/7.01%/3.00%/6.22%  mean=6.83%
+Re=   500 [TRAIN           ]  per-station relL2=9.78%/3.14%/5.42%/4.48%  mean=5.71%
+Re=   600 [EXTRAP (unseen) ]  per-station relL2=10.40%/6.32%/6.09%/2.61%  mean=6.35%
+
+-- field: v --
+Re=    50 [TRAIN           ]  per-station relL2=32.37%/4.28%/2.38%/1.54%  mean=10.14%
+Re=   100 [TRAIN           ]  per-station relL2=9.36%/1.57%/1.31%/0.83%  mean=3.27%
+Re=   200 [TRAIN           ]  per-station relL2=4.81%/0.49%/0.76%/1.25%  mean=1.82%
+Re=   300 [INTERP (unseen) ]  per-station relL2=4.09%/1.39%/0.99%/1.12%  mean=1.90%
+Re=   500 [TRAIN           ]  per-station relL2=1.37%/0.43%/0.48%/1.04%  mean=0.83%
+Re=   600 [EXTRAP (unseen) ]  per-station relL2=1.08%/1.27%/0.82%/1.14%  mean=1.08%
+
+-- field: p --
+Re=    50 [TRAIN           ]  per-station relL2=5.28%/9.36%/6.29%/6.63%  mean=6.89%
+Re=   100 [TRAIN           ]  per-station relL2=7.04%/4.21%/5.05%/2.47%  mean=4.69%
+Re=   200 [TRAIN           ]  per-station relL2=3.95%/5.37%/6.40%/6.53%  mean=5.56%
+Re=   300 [INTERP (unseen) ]  per-station relL2=24.47%/17.59%/17.08%/14.02%  mean=18.29%
+Re=   500 [TRAIN           ]  per-station relL2=2.72%/4.60%/10.30%/6.58%  mean=6.05%
+Re=   600 [EXTRAP (unseen) ]  per-station relL2=9.39%/4.37%/10.00%/5.24%  mean=7.25%
+
+=== Fully-developed check (vs. exact closed form, far downstream) ===
+
+-- field: u --
+Re=    50 [TRAIN           ]  relL2=4.647%
+Re=   100 [TRAIN           ]  relL2=7.318%
+Re=   200 [TRAIN           ]  relL2=4.211%
+Re=   300 [INTERP (unseen) ]  relL2=2.099%
+Re=   500 [TRAIN           ]  relL2=0.903%
+Re=   600 [EXTRAP (unseen) ]  relL2=4.675%
+
+-- field: v --
+Re=    50 [TRAIN           ]  relL2=2.542%
+Re=   100 [TRAIN           ]  relL2=1.374%
+Re=   200 [TRAIN           ]  relL2=0.528%
+Re=   300 [INTERP (unseen) ]  relL2=0.871%
+Re=   500 [TRAIN           ]  relL2=0.786%
+Re=   600 [EXTRAP (unseen) ]  relL2=0.979%
+
+-- field: p --
+Re=    50 [TRAIN           ]  relL2=4.785%
+Re=   100 [TRAIN           ]  relL2=9.890%
+Re=   200 [TRAIN           ]  relL2=5.578%
+Re=   300 [INTERP (unseen) ]  relL2=2.204%
+Re=   500 [TRAIN           ]  relL2=4.273%
+Re=   600 [EXTRAP (unseen) ]  relL2=4.131%
+
+=== Generalization proof: TRAIN Re (direct data supervision) vs. unseen Re (physics + BCs only), per field ===
+[u] Developing-region mean error -- TRAIN: 7.55%   UNSEEN: 6.59%
+[u] Fully-developed mean error   -- TRAIN: 4.270%   UNSEEN: 3.387%
+[v] Developing-region mean error -- TRAIN: 4.02%   UNSEEN: 1.49%
+[v] Fully-developed mean error   -- TRAIN: 1.307%   UNSEEN: 0.925%
+[p] Developing-region mean error -- TRAIN: 5.80%   UNSEEN: 12.77%
+[p] Fully-developed mean error   -- TRAIN: 6.132%   UNSEEN: 3.168%
+If UNSEEN is comparable to TRAIN (not dramatically worse) for all three
+fields, the network has learned the Re-dependence of the physics via the
+log-Re embedding and the PDE residual, rather than memorizing four isolated
+lookup tables (cf. physics-only report Sec. 7.3, adapted to the hybrid
+setting and extended here from u-only to u, v, p).

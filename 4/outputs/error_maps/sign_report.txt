@@ -1,0 +1,61 @@
+SIGN ANALYSIS (ensemble of 3 models; significant = |ref| > 0.02 x max|ref|)
+neg_recall = of the points where the REFERENCE is significantly negative, fraction where the MODEL is negative;
+false_neg  = of the points where the reference is significantly positive, fraction where the model is negative;
+agree_sig  = fraction of significant points with the same sign.
+
+
+Re = 10000 (TRAIN)
+field      ref min   ref max  model min  model max % ref<-tau % model<-tau neg_recall  false_neg  agree_sig
+U          0.00239      1.22     0.0022        1.2       0.00         0.00        nan      0.000      1.000
+V            -0.14      21.7     -0.104       16.3       0.00         0.00        nan      0.000      1.000
+P                0      1.37    0.00728       1.39       0.00         0.00        nan      0.000      1.000
+chi         0.0165      15.9    0.00643       3.62       0.00         0.00        nan      0.000      1.000
+   -> neither reference nor model has significantly negative values for any field (no sign map drawn)
+
+Re = 20000 (TRAIN)
+field      ref min   ref max  model min  model max % ref<-tau % model<-tau neg_recall  false_neg  agree_sig
+U          0.00409      1.18    0.00379       1.17       0.00         0.00        nan      0.000      1.000
+V           -0.106      16.9    -0.0977       13.8       0.00         0.00        nan      0.000      1.000
+P                0      1.13   0.000298       1.19       0.00         0.00        nan      0.000      1.000
+chi         0.0306      28.6      0.015       4.63       0.00         0.00        nan      0.000      1.000
+   -> neither reference nor model has significantly negative values for any field (no sign map drawn)
+
+Re = 40000 (TRAIN)
+field      ref min   ref max  model min  model max % ref<-tau % model<-tau neg_recall  false_neg  agree_sig
+U          0.00725      1.16     0.0067       1.15       0.00         0.00        nan      0.000      1.000
+V          -0.0979      13.1    -0.0681       11.6       0.00         0.00        nan      0.000      1.000
+P                0     0.956  -0.000251      0.976       0.00         0.00        nan      0.000      1.000
+chi         0.0579      52.9     0.0376       6.65       0.00         0.00        nan      0.000      1.000
+   -> neither reference nor model has significantly negative values for any field (no sign map drawn)
+
+Re = 80000 (TRAIN)
+field      ref min   ref max  model min  model max % ref<-tau % model<-tau neg_recall  false_neg  agree_sig
+U           0.0127      1.15     0.0121       1.14       0.00         0.00        nan      0.000      1.000
+V          -0.0956      10.1    -0.0816        9.7       0.00         0.00        nan      0.000      1.000
+P                0     0.819   -0.00291      0.827       0.00         0.00        nan      0.000      1.000
+chi          0.108      98.7     0.0868       9.81       0.00         0.00        nan      0.000      1.000
+   -> neither reference nor model has significantly negative values for any field (no sign map drawn)
+
+Re = 14000 (VAL)
+field      ref min   ref max  model min  model max % ref<-tau % model<-tau neg_recall  false_neg  agree_sig
+U          0.00308       1.2    0.00285       1.19       0.00         0.00        nan      0.000      1.000
+V           -0.119      19.2    -0.0977       15.1       0.00         0.00        nan      0.000      1.000
+P                0      1.25    0.00214       1.29       0.00         0.00        nan      0.000      1.000
+chi         0.0222        21    0.00962       3.95       0.00         0.00        nan      0.000      1.000
+   -> neither reference nor model has significantly negative values for any field (no sign map drawn)
+
+Re = 56000 (VAL)
+field      ref min   ref max  model min  model max % ref<-tau % model<-tau neg_recall  false_neg  agree_sig
+U          0.00953      1.16     0.0089       1.14       0.00         0.00        nan      0.000      1.000
+V          -0.0967      11.5    -0.0675       10.7       0.00         0.00        nan      0.000      1.000
+P                0     0.886   -0.00115      0.897       0.00         0.00        nan      0.000      1.000
+chi         0.0785      71.6      0.056          8       0.00         0.00        nan      0.000      1.000
+   -> neither reference nor model has significantly negative values for any field (no sign map drawn)
+
+Re = 88000 (VAL)
+field      ref min   ref max  model min  model max % ref<-tau % model<-tau neg_recall  false_neg  agree_sig
+U           0.0137      1.15     0.0131       1.14       0.00         0.00        nan      0.000      1.000
+V          -0.0953      9.71    -0.0902       9.43       0.00         0.00        nan      0.000      1.000
+P                0     0.803   -0.00348       0.81       0.00         0.00        nan      0.000      1.000
+chi          0.118       108     0.0979       10.4       0.00         0.00        nan      0.000      1.000
+   -> neither reference nor model has significantly negative values for any field (no sign map drawn)

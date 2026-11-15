@@ -1,0 +1,6 @@
+candidate,weights,train_u,train_v,train_p,unseen_u,unseen_v,unseen_p,overall_score
+fixed_data_heavy,"data=20.000;pde=1.000;inlet=5.000;wall=5.000;outlet=1.000",5.124,1.626,6.881,4.465,1.206,6.267,4.262
+fixed_bc_heavy,"data=10.000;pde=1.000;inlet=10.000;wall=10.000;outlet=1.000",4.853,1.660,7.855,5.030,1.224,9.359,4.997
+fixed_default,"data=10.000;pde=1.000;inlet=5.000;wall=5.000;outlet=1.000",6.062,1.923,10.126,5.033,1.460,10.000,5.767
+fixed_data_light,"data=5.000;pde=1.000;inlet=5.000;wall=5.000;outlet=1.000",5.879,1.688,10.264,5.649,1.171,11.675,6.054
+adaptive_wang2021,"data=0.703;pde=1.000;inlet=2.077;wall=2.812;outlet=3.714",14.931,2.201,16.250,12.669,1.677,17.549,10.879

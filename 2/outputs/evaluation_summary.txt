@@ -1,0 +1,43 @@
+=== Developing-region check (vs. Hornbeck 1964); stations = f*Le(Re), f in [0.05, 0.25, 0.5, 0.9], Le=K*D*Re, K=0.06 (Langhaar 1942 functional form) ===
+u: self-normalized relative L2 (eq. A). v, p: scale-normalized L2 (eq. B).
+Re=    50 [TRAIN           ] Le=0.300 m  x=0.016/0.072/0.152/0.273 m
+    u relL2 =18.3%/11.8%/5.7%/1.3%  mean=9.27%
+    v normL2=12.0%/2.5%/2.5%/3.7%  mean=5.19%
+    p normL2=12.1%/9.5%/7.2%/5.4%  mean=8.56%
+Re=   100 [TRAIN           ] Le=0.600 m  x=0.032/0.152/0.297/0.537 m
+    u relL2 =13.7%/4.1%/1.8%/3.9%  mean=5.86%
+    v normL2=4.6%/1.9%/2.8%/2.5%  mean=2.94%
+    p normL2=7.3%/3.2%/1.6%/1.4%  mean=3.36%
+Re=   200 [TRAIN           ] Le=1.200 m  x=0.056/0.297/0.601/1.082 m
+    u relL2 =9.5%/4.4%/4.5%/2.0%  mean=5.11%
+    v normL2=1.9%/1.9%/1.3%/1.8%  mean=1.73%
+    p normL2=4.0%/0.8%/0.4%/1.2%  mean=1.60%
+Re=   300 [INTERP (unseen) ] Le=1.800 m  x=0.088/0.449/0.898/1.619 m
+    u relL2 =7.9%/5.3%/2.0%/2.4%  mean=4.38%
+    v normL2=1.0%/1.2%/1.0%/1.7%  mean=1.22%
+    p normL2=2.8%/0.9%/1.0%/1.4%  mean=1.52%
+Re=   500 [TRAIN           ] Le=3.000 m  x=0.152/0.754/1.499/2.701 m
+    u relL2 =10.0%/4.4%/1.8%/1.9%  mean=4.53%
+    v normL2=1.2%/0.5%/1.2%/0.6%  mean=0.85%
+    p normL2=3.4%/0.7%/1.1%/1.2%  mean=1.62%
+Re=   600 [EXTRAP (unseen) ] Le=3.600 m  x=0.176/0.898/1.804/3.238 m
+    u relL2 =11.8%/4.4%/1.7%/2.0%  mean=4.95%
+    v normL2=1.2%/0.5%/1.0%/0.7%  mean=0.84%
+    p normL2=4.7%/1.3%/0.5%/1.4%  mean=1.97%
+
+=== Fully-developed check (vs. exact Hagen-Poiseuille u, v=0, and constant-dp/dx p), single common station x=3.900 m (97.5% of L=4.0 m) ===
+Re=    50 [TRAIN           ]  u relL2=1.375%  v normL2=3.835%  p normL2=6.948%
+Re=   100 [TRAIN           ]  u relL2=1.007%  v normL2=2.581%  p normL2=5.731%
+Re=   200 [TRAIN           ]  u relL2=1.363%  v normL2=1.511%  p normL2=5.121%
+Re=   300 [INTERP (unseen) ]  u relL2=1.799%  v normL2=1.018%  p normL2=5.053%
+Re=   500 [TRAIN           ]  u relL2=2.715%  v normL2=0.670%  p normL2=5.255%
+Re=   600 [EXTRAP (unseen) ]  u relL2=3.159%  v normL2=0.658%  p normL2=5.398%
+
+=== Generalization proof: TRAIN Re (direct data supervision) vs. unseen Re (physics + BCs only), all 3 fields ===
+[u] Developing-region mean -- TRAIN: 6.19%   UNSEEN: 4.66%   |   Fully-developed -- TRAIN: 1.615%   UNSEEN: 2.479%
+[v] Developing-region mean -- TRAIN: 2.68%   UNSEEN: 1.03%   |   Fully-developed -- TRAIN: 2.149%   UNSEEN: 0.838%
+[p] Developing-region mean -- TRAIN: 3.78%   UNSEEN: 1.74%   |   Fully-developed -- TRAIN: 5.764%   UNSEEN: 5.226%
+If UNSEEN is comparable to TRAIN for all three fields (not dramatically
+worse), the network has learned the Re-dependence of the axisymmetric
+physics via the log-Re embedding and the PDE residual, rather than
+memorizing four isolated lookup tables.

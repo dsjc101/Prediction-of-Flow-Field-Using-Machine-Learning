@@ -1,0 +1,7 @@
+ABLATION (VAL Re only; relL2 % for u,p,cf; PDE-res = rms momentum residual / u_tau^2)
+Re               14000                         56000                        88000                     
+field          PDE-res      cf      p      u PDE-res     cf      p      u PDE-res     cf      p      u
+variant                                                                                               
+A_found         17.425   6.233  0.624  0.629  26.952  3.979  0.256  0.421  36.436  3.948  0.360  0.475
+B_data_only     23.601   3.965  0.355  0.343  36.024  6.885  0.204  0.161  90.751  6.114  0.235  0.190
+C_physics_x100   6.032  10.813  0.937  1.587   9.539  7.822  0.508  1.267  14.446  7.614  0.594  1.249

@@ -1,0 +1,21 @@
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Experimental File} & \textbf{Experimental $\mathrm{Re}$} & \textbf{Literature Source} & \textbf{Skin Friction $C_f$} & \textbf{PINN Rel $L_2$ Error} & \textbf{Max Wall Deviation $u^+$} \\
+\midrule
+zag\_3.1577E+04.txt & 31,577 & Zagarola \& Smits (1998) & 0.005793 & 4.17\% & 1.46 \\
+zag\_4.1727E+04.txt & 41,727 & Zagarola \& Smits (1998) & 0.005444 & 3.90\% & 1.43 \\
+zag\_5.6677E+04.txt & 56,677 & Zagarola \& Smits (1998) & 0.005094 & 3.54\% & 1.35 \\
+zag\_7.4293E+04.txt & 74,293 & Zagarola \& Smits (1998) & 0.004811 & 3.27\% & 1.32 \\
+mck\_7.4345E+04.txt & 74,345 & McKeon et al. (2004) & 0.004811 & 3.45\% & 1.30 \\
+zag\_9.8811E+04.txt & 98,811 & Zagarola \& Smits (1998) & 0.004537 & 3.02\% & 1.24 \\
+mck\_1.4458E+05.txt & 144,580 & McKeon et al. (2004) & 0.004206 & 4.18\% & 1.43 \\
+zag\_1.4579E+05.txt & 145,790 & Zagarola \& Smits (1998) & 0.004199 & 2.81\% & 1.15 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Stage 5 Princeton Superpipe validation across all 8 experimental pitot traverse datasets (Source: \texttt{5/data/exp/} evaluated directly against \texttt{5/outputs/models/dense/final\_seed0.pt}). Literature labels are those given in the data repository~\cite{superpipe_data}. Max Wall Deviation $u^+$ is the maximum absolute pointwise deviation $\max |u^+_{\mathrm{PINN}} - u^+_{\mathrm{exp}}|$ in inner wall units ($u^+ = U/u_\tau$).}
+\label{tab:superpipe_all_re}
+\end{table}

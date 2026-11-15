@@ -1,0 +1,26 @@
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Pipeline Stage} & \textbf{Stage 1} & \textbf{Stage 2} & \textbf{Stage 3} & \textbf{Stage 4} & \textbf{Stage 5} \\
+\midrule
+Flow Regime & Laminar 2D Channel & Laminar Axisymmetric Pipe & Laminar 3D Duct & Turbulent Channel (RANS+SA) & Turbulent Pipe (RANS+SA) \\
+Reference Solver & Finite Difference ($500\times 81$) & Finite Difference ($500\times 81$) & Parabolic Marching FD ($3624\times 41\times 81$) & Spalart-Allmaras RANS ($800\times 400$) & Spalart-Allmaras RANS ($800\times 400$) \\
+Network Inputs & $(x, y, \mathrm{Re})$ [3 features] & $(x, r, \mathrm{Re})$ [3 features] & $(x, y, z, \mathrm{Re})$ [4 features] & $(s, \eta, z, r)$ [4 features] & $(s, \eta, z, r)$ [4 features] \\
+Hidden Layers & $4 \times 80$, tanh & $4 \times 80$, tanh & $4 \times 80$, tanh & $4 \times 64$, tanh & $4 \times 64$, tanh \\
+Trainable Parameters & 20,003 & 20,003 & 20,164 & 13,060 & 13,060 \\
+Boundary Treatment & Soft Penalty Loss & Soft Penalty Loss & Soft Penalty Loss & Hard Wall Envelope [$\tanh(\mathrm{Re}_\tau y/10)$] & Hard Wall/Axis Envelopes \\
+Training $\mathrm{Re}$ & 50, 100, 200, 500 & 50, 100, 200, 500 & 50, 100, 200, 500 & 10k, 20k, 40k, 80k & 10k, 20k, 40k, 80k \\
+Test $\mathrm{Re}$ & 300 (interp), 600 (extrap) & 300 (interp), 600 (extrap) & 300 (interp), 600 (extrap) & 28k (interp), 96k, 120k (extrap) & 28k (interp), 96k, 120k (extrap) \\
+$u$ Error Range & 3.88\% -- 5.69\% & 2.20\% -- 4.16\% & 8.81\% -- 12.69\% & 0.42\% -- 0.58\% & 0.36\% -- 0.57\% \\
+$p$ Error Range & 4.95\% -- 8.35\% & 1.36\% -- 2.76\% & 56.77\% -- 106.39\% & 0.38\% -- 0.58\% & 0.65\% -- 2.57\% \\
+$\tilde{\nu}$ Relative Error & N/A & N/A & N/A & 99.21\% -- 99.50\% & 47.11\% -- 79.64\% \\
+Measured CPU Time (1k pts) & 0.97 ms & 1.00 ms & 0.60 ms & 1.00 ms & 1.93 ms \\
+Checkpoint File & \texttt{channel\_pinn\_hybrid.pt} & \texttt{pipe\_pinn\_hybrid.pt} & \texttt{duct\_pinn.pt} & \texttt{final\_s0.pt} & \texttt{final\_seed0.pt} \\
+\bottomrule
+\end{tabular}
+}
+\caption{Master comparative synthesis across all five stages of the PINN pipeline. All parameters, dimensions, and error metrics are extracted directly from code definitions, measured benchmarks, and saved checkpoints.}
+\label{tab:pipeline_synthesis}
+\end{table}

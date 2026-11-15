@@ -1,0 +1,10 @@
+
+[sparse] physics-scale sweep (mom, sa, cont multiplied by f), VAL, single seed
+       f  headline       U       P      Cf   PDE res
+       1      1.89    0.97    1.40    3.30     11.77
+      10      2.41    1.01    3.50    2.72      5.88
+     100      9.43    3.47    4.21   20.60     10.03
+     300     14.29    5.34   13.72   23.81     25.46
+    1000     17.44    6.00   11.96   34.37      9.85
+   10000     25.10    9.90    6.30   59.09      2.66
+best factor on VAL: 1

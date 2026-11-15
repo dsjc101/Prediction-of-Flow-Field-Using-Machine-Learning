@@ -1,0 +1,23 @@
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Reynolds Number} & \textbf{Regime Split} & \textbf{Axial Velocity $u$} & \textbf{Vertical Velocity $v$} & \textbf{Kinematic Pressure $p$} & \textbf{Skin Friction $C_f$} \\
+\midrule
+10,000 & TRAIN & 0.69\% & 46.55\% & 0.55\% & 9.21\% \\
+14,000 & VAL & 0.56\% & 33.34\% & 0.56\% & 7.90\% \\
+20,000 & TRAIN & 0.47\% & 23.45\% & 0.48\% & 6.84\% \\
+28,000 & TEST & 0.42\% & 16.86\% & 0.38\% & 6.11\% \\
+40,000 & TRAIN & 0.39\% & 11.90\% & 0.33\% & 5.65\% \\
+56,000 & VAL & 0.39\% & 8.67\% & 0.30\% & 5.42\% \\
+80,000 & TRAIN & 0.43\% & 6.73\% & 0.35\% & 5.27\% \\
+88,000 & VAL & 0.45\% & 6.53\% & 0.39\% & 5.25\% \\
+96,000 & TEST & 0.48\% & 6.50\% & 0.44\% & 5.23\% \\
+120,000 & TEST & 0.58\% & 7.14\% & 0.58\% & 5.22\% \\
+\bottomrule
+\end{tabular}
+}
+\caption{Stage 4 complete 10-Reynolds number evaluation matrix across training, validation, and test sets (Source: \texttt{4/outputs/final\_metrics.csv}). $C_f$ error is the relative error of the wall shear stress coefficient with respect to the reference solver.}
+\label{tab:stage4_all_re}
+\end{table}

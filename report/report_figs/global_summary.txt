@@ -1,0 +1,28 @@
+Re=50 role=TRAIN field=U entire_domain_relL2=0.088148 fully_developed_relL2=0.079244
+Re=50 role=TRAIN field=V entire_domain_relL2=0.027943 fully_developed_relL2=0.027039
+Re=50 role=TRAIN field=W entire_domain_relL2=0.017225 fully_developed_relL2=0.017652
+Re=50 role=TRAIN field=P entire_domain_relL2=0.807015 fully_developed_relL2=0.789641
+Re=100 role=TRAIN field=U entire_domain_relL2=0.089082 fully_developed_relL2=0.078855
+Re=100 role=TRAIN field=V entire_domain_relL2=0.024566 fully_developed_relL2=0.024760
+Re=100 role=TRAIN field=W entire_domain_relL2=0.014214 fully_developed_relL2=0.015005
+Re=100 role=TRAIN field=P entire_domain_relL2=0.738645 fully_developed_relL2=0.640925
+Re=200 role=TRAIN field=U entire_domain_relL2=0.097672 fully_developed_relL2=0.075821
+Re=200 role=TRAIN field=V entire_domain_relL2=0.020189 fully_developed_relL2=0.020995
+Re=200 role=TRAIN field=W entire_domain_relL2=0.011133 fully_developed_relL2=0.012131
+Re=200 role=TRAIN field=P entire_domain_relL2=0.666558 fully_developed_relL2=0.444186
+Re=300 role=INTERP field=U entire_domain_relL2=0.106221 fully_developed_relL2=0.076184
+Re=300 role=INTERP field=V entire_domain_relL2=0.017401 fully_developed_relL2=0.018354
+Re=300 role=INTERP field=W entire_domain_relL2=0.009363 fully_developed_relL2=0.010319
+Re=300 role=INTERP field=P entire_domain_relL2=0.567701 fully_developed_relL2=0.319284
+Re=500 role=TRAIN field=U entire_domain_relL2=0.120816 fully_developed_relL2=0.080638
+Re=500 role=TRAIN field=V entire_domain_relL2=0.014038 fully_developed_relL2=0.014845
+Re=500 role=TRAIN field=W entire_domain_relL2=0.007271 fully_developed_relL2=0.007978
+Re=500 role=TRAIN field=P entire_domain_relL2=0.672165 fully_developed_relL2=0.177485
+Re=600 role=EXTRAP field=U entire_domain_relL2=0.126917 fully_developed_relL2=0.083138
+Re=600 role=EXTRAP field=V entire_domain_relL2=0.012962 fully_developed_relL2=0.013592
+Re=600 role=EXTRAP field=W entire_domain_relL2=0.006590 fully_developed_relL2=0.007186
+Re=600 role=EXTRAP field=P entire_domain_relL2=1.063941 fully_developed_relL2=0.138818
+field=U entire_domain_TRAIN_mean=0.098929 entire_domain_UNSEEN_mean=0.116569
+field=V entire_domain_TRAIN_mean=0.021684 entire_domain_UNSEEN_mean=0.015182
+field=W entire_domain_TRAIN_mean=0.012460 entire_domain_UNSEEN_mean=0.007976
+field=P entire_domain_TRAIN_mean=0.721096 entire_domain_UNSEEN_mean=0.815821

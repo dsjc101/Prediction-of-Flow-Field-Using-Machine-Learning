@@ -1,0 +1,14 @@
+K_mean_measured=0.08625000000000001
+L_DOMAIN_used=9.660000000000002
+Le_Re50_coarse_grid_step1=0.61
+Le_Re100_coarse_grid_step1=1.1360000000000001
+Le_Re200_coarse_grid_step1=2.2720000000000002
+Le_Re300_coarse_grid_step1=3.4080000000000004
+Le_Re500_coarse_grid_step1=5.68
+Le_Re600_coarse_grid_step1=6.816000000000001
+Le_Re50_full_res_step2=0.6372453767595916
+Le_Re100_full_res_step2=1.2691581562241239
+Le_Re200_full_res_step2=2.5329837151531884
+Le_Re300_full_res_step2=3.788810378139664
+Le_Re500_full_res_step2=6.01516974882694
+Le_Re600_full_res_step2=6.807060447143252

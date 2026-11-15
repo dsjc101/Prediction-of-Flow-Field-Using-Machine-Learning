@@ -1,0 +1,18 @@
+
+=== SPARSE model: relL2 %  (mean ± std over seeds) ===
+role                    Re               U           V_hat         P_hat            Cf
+TEST interp          28000     1.17 ± 0.11      78.9 ± 2.9   1.43 ± 0.28   3.63 ± 0.31
+TEST extrap 1.2x     96000     0.92 ± 0.09      44.8 ± 2.9   2.00 ± 0.40   3.46 ± 0.38
+TEST extrap 1.5x    120000     0.95 ± 0.11      39.9 ± 2.9   2.49 ± 0.69   3.30 ± 0.52
+
+--- region breakdown (mean over the Re listed above), relL2 %: U / V_hat / P_hat / Cf ---
+all                        1.01      54.5     1.97     3.46
+x<3R                       2.10     155.8     4.36    11.10
+inlet x<10R                1.55     112.0     3.17     6.56
+developed x>=0.9L          0.68       1.7     1.26     3.91
+hold-out bands             0.94       3.8     1.68     2.09
+
+--- fresh-point PDE residual rms (u_tau units): continuity / x-mom / r-mom / SA ---
+TEST interp          28000       0.08     7.50     2.97     0.04
+TEST extrap 1.2x     96000       0.14    19.55     9.26     0.09
+TEST extrap 1.5x    120000       0.24    25.15    18.67     0.19

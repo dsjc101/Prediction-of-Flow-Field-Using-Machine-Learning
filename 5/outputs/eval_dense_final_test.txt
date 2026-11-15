@@ -1,0 +1,18 @@
+
+=== DENSE model: relL2 %  (mean ± std over seeds) ===
+role                    Re               U           V_hat         P_hat            Cf
+TEST interp          28000     0.36 ± 0.04       4.7 ± 0.7   0.65 ± 0.23   1.47 ± 0.50
+TEST extrap 1.2x     96000     0.38 ± 0.03       2.9 ± 0.1   0.98 ± 0.38   1.77 ± 0.14
+TEST extrap 1.5x    120000     0.57 ± 0.06       4.5 ± 1.0   2.57 ± 0.95   2.24 ± 0.22
+
+--- region breakdown (mean over the Re listed above), relL2 %: U / V_hat / P_hat / Cf ---
+all                        0.44       4.0     1.40     1.83
+x<3R                       0.49       9.2     1.79     4.12
+inlet x<10R                0.47       7.2     1.86     2.94
+developed x>=0.9L          0.40       1.5     1.11     1.58
+hold-out bands             0.44       2.7     1.42     1.61
+
+--- fresh-point PDE residual rms (u_tau units): continuity / x-mom / r-mom / SA ---
+TEST interp          28000       0.07    11.05     7.88     0.05
+TEST extrap 1.2x     96000       0.21    21.49    16.00     0.21
+TEST extrap 1.5x    120000       0.39    38.28    35.15     0.35
